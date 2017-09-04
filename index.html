@@ -22,9 +22,9 @@
 				</div><!--.input-group-->
 				
 				<div id="display" class="fluid-container">
-					<iframe class="w-100" src="https://en.m.wikipedia.org/wiki/Special:Random"></iframe>
+					<iframe id="iframe" class="w-100" src="https://en.m.wikipedia.org/wiki/Special:Random" sandbox=""></iframe>
 					<button class="btn btn-primary col-6">Get new article</button>
-					<button class="btn btn-primary col-5 float-right">Open article</button>
+					<a id="open-button" class="btn btn-primary col-5 float-right" role="button" href="https://en.m.wikipedia.org/wiki/Special:Random" target="_blank">Open article</a>
 				</div><!--#display-->
 			</section>
 			
@@ -33,7 +33,7 @@
 		</div><!--.container-->
 	<!---------- SCRIPTS ---------->
 	<script src="/analytics/analytics.js"></script>
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
 	<script src="js/wikisearch.js"></script>

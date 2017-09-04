@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
-	<body>
+	<body class="m-1 mr-3 p-0">
 		<div class="container-fluid">
 			<header class="text-center">
 				<h1>WikiSearch</h1>
@@ -20,6 +20,12 @@
 						<button class="btn btn-outline-primary" type="button">Search!</button>
 					</span><!--.input-group-button-->
 				</div><!--.input-group-->
+				
+				<div id="display" class="fluid-container">
+					<iframe class="w-100" src="https://en.m.wikipedia.org/wiki/Special:Random"></iframe>
+					<button class="btn btn-primary col-6">Get new article</button>
+					<button class="btn btn-primary col-5 float-right">Open article</button>
+				</div><!--#display-->
 			</section>
 			
 			<footer>

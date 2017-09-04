@@ -6,3 +6,14 @@ body {
 	color: black;
 	background: #b8daff;
 }
+
+section {
+	top: 90px;
+	bottom: 0;
+	max-height: 100%;
+
+}
+
+iframe {
+	height: calc(100vh - 180px);
+}

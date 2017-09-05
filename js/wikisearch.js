@@ -97,6 +97,7 @@ $("#new-article").on("click", function() {
 /*** Event for #search-field ***/
 $("#search-field").on("change", function() {
 	getSearch($("#search-field").val());
+	$("#search-field").val("");
 });
 
 /*** Event for #back-button ***/

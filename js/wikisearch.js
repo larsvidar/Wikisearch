@@ -5,7 +5,7 @@ var apiWikiUrl = "https://en.wikipedia.org/w/api.php?callback=?" // URL for API-
 var articleId; //Variable to hold Wikipedia article ID.
 var randomURL = "https://en.m.wikipedia.org/?curid=" //Base URL to use width article ID.
 var $display = $("#display").children();
-var backButton = `<button id="back-button" class="btn btn-primary btn-block mb-3">Get random article</button>`
+var backButton = `<button id="back-button" class="btn btn-primary btn-block mb-3 mt-2">Get random article</button>`
 var wikiRandomOptions = {
 							action: "query",
 							list: "random",
@@ -16,7 +16,7 @@ var wikiSearchOptions = {
 							action: "opensearch",
 							search: "",
 							format: "json",
-							limit: 20,
+							limit: 12,
 							namespace: 0,
 							prop: "pageimages"
 						}
@@ -63,7 +63,7 @@ function buildHTML(result) {
 		/* This is the HTML for the search-results */
 		htmlString[i] = `<a class="result-link col-xs-12 col-sm-6 col-lg-3" href="${result[3][i]}" target="_blank">
 	<div class="result-box">
-		<h2 class="h2">${result[1][i]}</h2>
+		<h4 class="h4">${result[1][i]}</h4>
 		<p>${result[2][i]}</p>
 	</div>
 </a>`

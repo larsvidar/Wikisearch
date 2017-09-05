@@ -14,7 +14,7 @@ section {
 }
 
 iframe {
-	height: calc(100vh - 190px);
+	height: calc(100vh - 230px);
 }
 
 /*************** Search-results ***************/
@@ -46,3 +46,17 @@ a {
 	text-decoration: none;
 }
 
+a:hover {
+	text-decoration: none;
+	color: #000;
+}
+
+.result-box:hover {
+	background: #effaff;
+	text-decoration: none;
+}
+
+.result-box:active {
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, .9);
+	transform: translate(4px, 4px);
+}

@@ -20,13 +20,23 @@ function checkScreen() {
 	}
 }
 
-/*************** Requesting random page via API ***************/
-$.getJSON(apiRandomWikiUrl, function(data) {
-	articleId = (data.query.random[0].id);
-	randomURL = checkScreen(randomURL);
-	randomURL += articleId;
-	setIframe(randomURL);
+/***** Function for requesting random page via API *****/
+function getRandom() {
+	$.getJSON(apiRandomWikiUrl, function(data) {
+		articleId = (data.query.random[0].id);
+		randomURL = checkScreen(randomURL);
+		randomURL += articleId;
+		setIframe(randomURL);
+	});
+}
+
+getRandom();
+
+/*** Event for #new-article button. ***/
+$("#new-article").on("click", function() {
+	getRandom();
 });
+
 
 
 

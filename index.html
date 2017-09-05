@@ -6,13 +6,16 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/main.css">
 	</head>
+	
 	<body class="m-1 mr-3 p-0">
 		<div class="container-fluid">
+			<!-- Title and sub-header -->
 			<header class="text-center">
 				<h1>WikiSearch</h1>
 				<p>A search-page for Wikipedia</p>
 			</header>
 			
+			<!-- THe main content of the page -->
 			<section>
 				<div class="input-group">
 					<input class="form-control" type="text" placeholder="Search on Wikipedia..." aria-label="Search for...">
@@ -23,7 +26,7 @@
 				
 				<div id="display" class="fluid-container">
 					<iframe id="iframe" class="w-100" src="https://en.m.wikipedia.org/wiki/Special:Random" sandbox=""></iframe>
-					<button class="btn btn-primary col-6">Get new article</button>
+					<button id="new-article" class="btn btn-primary col-6">Get new article</button>
 					<a id="open-button" class="btn btn-primary col-5 float-right" role="button" href="https://en.m.wikipedia.org/wiki/Special:Random" target="_blank">Open article</a>
 				</div><!--#display-->
 			</section>
@@ -31,6 +34,7 @@
 			<footer>
 			</footer>
 		</div><!--.container-->
+	
 	<!---------- SCRIPTS ---------->
 	<script src="/analytics/analytics.js"></script>
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>

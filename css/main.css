@@ -12,6 +12,7 @@ section {
 	top: 90px;
 	bottom: 0;
 	max-height: 100%;
+	max-width: 1200px;
 }
 
 iframe {

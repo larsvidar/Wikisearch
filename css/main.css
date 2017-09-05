@@ -1,5 +1,6 @@
 * {
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 }
 
 body {
@@ -30,8 +31,8 @@ iframe {
 	padding: 15px;
 	margin: 10px 0;
 	border-radius: 15px;
-	box-shadow: 5px 5px 5px rgba(0, 0, 0, .7);
-	text-decoration: none;
+	-webkit-box-shadow: 5px 5px 5px rgba(0, 0, 0, .7);
+	        box-shadow: 5px 5px 5px rgba(0, 0, 0, .7);
 }
 
 
@@ -52,11 +53,15 @@ a:hover {
 }
 
 .result-box:hover {
-	background: #effaff;
+	background: #40679e;
+	color: #fff;
 	text-decoration: none;
 }
 
 .result-box:active {
-	box-shadow: 1px 1px 3px rgba(0, 0, 0, .9);
-	transform: translate(4px, 4px);
+	-webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, .9);
+	        box-shadow: 1px 1px 3px rgba(0, 0, 0, .9);
+	-webkit-transform: translate(4px, 4px);
+	    -ms-transform: translate(4px, 4px);
+	        transform: translate(4px, 4px);
 }

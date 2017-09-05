@@ -6,6 +6,7 @@ body {
 	background: #ddeeff;
 }
 
+/*************** Container ***************/
 section {
 	top: 90px;
 	bottom: 0;
@@ -16,6 +17,7 @@ iframe {
 	height: calc(100vh - 190px);
 }
 
+/*************** Search-results ***************/
 .result-link {
 	display: inline-block;
 	text-decoration: none;	
@@ -32,6 +34,8 @@ iframe {
 	text-decoration: none;
 }
 
+
+/*************** ELEMENTS ****************/
 .btn-outline-primary {
 	color: black;
 	background: #b8daff;

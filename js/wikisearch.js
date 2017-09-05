@@ -1,9 +1,11 @@
 console.log("Wikisearch.js loaded!");
 
-/*************** Variables ***************/
+/*************** VARIABLES ***************/
 var apiWikiUrl = "https://en.wikipedia.org/w/api.php?callback=?" // URL for API-request
 var articleId; //Variable to hold Wikipedia article ID.
 var randomURL = "https://en.m.wikipedia.org/?curid=" //Base URL to use width article ID.
+var $display = $("#display").children();
+var backButton = `<button id="back-button" class="btn btn-primary btn-block mb-3">Get random article</button>`
 var wikiRandomOptions = {
 							action: "query",
 							list: "random",
@@ -12,14 +14,15 @@ var wikiRandomOptions = {
 						}
 var wikiSearchOptions = {
 							action: "opensearch",
-							search: "tromsø",
+							search: "",
 							format: "json",
 							limit: 20,
 							namespace: 0,
 							prop: "pageimages"
 						}
 
-/*************** Functions ***************/
+						
+/*************** FUNCTIONS ***************/
 /***** Function for passing randomURL to #iframe and #open-button *****/
 function setIframe(url) {
 	$("#iframe").attr("src", url);
@@ -74,12 +77,18 @@ function displayHTML(htmlString) {
 	for (var i = 0; i < htmlString.length; i++) {
 		htmlResult += htmlString[i];
 	}
-	$("#display").html(htmlResult);	
+	htmlResult += backButton;
+	$("#display").html(htmlResult);
 }
 
-//Executes when page is finished loading:
-getRandom();
+/***** Function to display random page again *****/
+function backToRandom() {
+	$("#display").html($display);
+	getRandom();
+}
 
+
+/*************** EVENTS ***************/
 /*** Event for #new-article button. ***/
 $("#new-article").on("click", function() {
 	getRandom();
@@ -89,6 +98,13 @@ $("#new-article").on("click", function() {
 $("#search-field").on("change", function() {
 	getSearch($("#search-field").val());
 });
+
+/*** Event for #back-button ***/
+$("#display").on("click", "#back-button", backToRandom);
+
+
+//Executes when page is finished loading:
+getRandom();
 
 
 

@@ -90,7 +90,7 @@ function backToRandom() {
 
 /*************** EVENTS ***************/
 /*** Event for #new-article button. ***/
-$("#new-article").on("click", function() {
+$("#display").on("click", "#new-article", function() {
 	getRandom();
 });
 
